@@ -1,0 +1,356 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6/"
+     xml:base="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-6="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6">
+        <rdfs:comment xml:lang="it">Crop Ontology</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#HasClimateProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#HasClimateProperty">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Crop"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Climate"/>
+        <rdfs:comment>Rappresenta i fattori climatici come Umidità, Pioggia e Temperatura ambiente</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#HasSoilProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#HasSoilProperty">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Crop"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Soil"/>
+        <rdfs:comment>Rappresenta i fattori terreni come Potassio, percentuale di ph, Azoto e Fosforo</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Crop_ID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Crop_ID">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Crop"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Crop_Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Crop_Name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Crop"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Humidity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Humidity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Climate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Nitrogen -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Nitrogen">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Soil"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Ph_value -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Ph_value">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Soil"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Phosphorus -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Phosphorus">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Soil"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Potassium -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Potassium">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Soil"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Rainfall -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Rainfall">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Climate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Temperature -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Temperature">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Climate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Climate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Climate"/>
+    
+
+
+    <!-- http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Crop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Crop"/>
+    
+
+
+    <!-- http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Soil -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Soil"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Climate_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Climate_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Climate"/>
+        <untitled-ontology-6:Humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">82</untitled-ontology-6:Humidity>
+        <untitled-ontology-6:Rainfall rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">202.93</untitled-ontology-6:Rainfall>
+        <untitled-ontology-6:Temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">21</untitled-ontology-6:Temperature>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Climate_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Climate_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Climate"/>
+        <untitled-ontology-6:Humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">63.69</untitled-ontology-6:Humidity>
+        <untitled-ontology-6:Rainfall rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">87.75</untitled-ontology-6:Rainfall>
+        <untitled-ontology-6:Temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">22.6</untitled-ontology-6:Temperature>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Climate_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Climate_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Climate"/>
+        <untitled-ontology-6:Humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">17</untitled-ontology-6:Humidity>
+        <untitled-ontology-6:Rainfall rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">88.55</untitled-ontology-6:Rainfall>
+        <untitled-ontology-6:Temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">17</untitled-ontology-6:Temperature>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Climate_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Climate_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Climate"/>
+        <untitled-ontology-6:Humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.59</untitled-ontology-6:Humidity>
+        <untitled-ontology-6:Rainfall rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">128.25</untitled-ontology-6:Rainfall>
+        <untitled-ontology-6:Temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">17.13</untitled-ontology-6:Temperature>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Climate_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Climate_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Climate"/>
+        <untitled-ontology-6:Humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">57.92</untitled-ontology-6:Humidity>
+        <untitled-ontology-6:Rainfall rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">122.65</untitled-ontology-6:Rainfall>
+        <untitled-ontology-6:Temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">36.5</untitled-ontology-6:Temperature>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Crop_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Crop_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Crop"/>
+        <untitled-ontology-6:HasClimateProperty rdf:resource="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Climate_1"/>
+        <untitled-ontology-6:HasSoilProperty rdf:resource="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Soil_1"/>
+        <untitled-ontology-6:Crop_ID rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</untitled-ontology-6:Crop_ID>
+        <untitled-ontology-6:Crop_Name>rice</untitled-ontology-6:Crop_Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Crop_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Crop_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Crop"/>
+        <untitled-ontology-6:HasClimateProperty rdf:resource="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Climate_2"/>
+        <untitled-ontology-6:HasSoilProperty rdf:resource="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Soil_2"/>
+        <untitled-ontology-6:Crop_ID rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">101</untitled-ontology-6:Crop_ID>
+        <untitled-ontology-6:Crop_Name>maize</untitled-ontology-6:Crop_Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Crop_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Crop_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Crop"/>
+        <untitled-ontology-6:HasClimateProperty rdf:resource="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Climate_3"/>
+        <untitled-ontology-6:HasSoilProperty rdf:resource="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Soil_3"/>
+        <untitled-ontology-6:Crop_ID rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">201</untitled-ontology-6:Crop_ID>
+        <untitled-ontology-6:Crop_Name>chickpea</untitled-ontology-6:Crop_Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Crop_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Crop_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Crop"/>
+        <untitled-ontology-6:HasClimateProperty rdf:resource="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Climate_4"/>
+        <untitled-ontology-6:HasSoilProperty rdf:resource="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Soil_4"/>
+        <untitled-ontology-6:Crop_ID rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">301</untitled-ontology-6:Crop_ID>
+        <untitled-ontology-6:Crop_Name>kidneybeans</untitled-ontology-6:Crop_Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Crop_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Crop_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Crop"/>
+        <untitled-ontology-6:HasClimateProperty rdf:resource="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Climate_5"/>
+        <untitled-ontology-6:HasSoilProperty rdf:resource="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Soil_5"/>
+        <untitled-ontology-6:Crop_ID rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">401</untitled-ontology-6:Crop_ID>
+        <untitled-ontology-6:Crop_Name>pigeonpeas</untitled-ontology-6:Crop_Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Soil_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Soil_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Soil"/>
+        <untitled-ontology-6:Nitrogen rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">90</untitled-ontology-6:Nitrogen>
+        <untitled-ontology-6:Ph_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.5</untitled-ontology-6:Ph_value>
+        <untitled-ontology-6:Phosphorus rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</untitled-ontology-6:Phosphorus>
+        <untitled-ontology-6:Potassium rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">43</untitled-ontology-6:Potassium>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Soil_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Soil_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Soil"/>
+        <untitled-ontology-6:Nitrogen rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">71</untitled-ontology-6:Nitrogen>
+        <untitled-ontology-6:Ph_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.74</untitled-ontology-6:Ph_value>
+        <untitled-ontology-6:Phosphorus rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">54</untitled-ontology-6:Phosphorus>
+        <untitled-ontology-6:Potassium rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16</untitled-ontology-6:Potassium>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Soil_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Soil_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Soil"/>
+        <untitled-ontology-6:Nitrogen rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40</untitled-ontology-6:Nitrogen>
+        <untitled-ontology-6:Ph_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.48</untitled-ontology-6:Ph_value>
+        <untitled-ontology-6:Phosphorus rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">72</untitled-ontology-6:Phosphorus>
+        <untitled-ontology-6:Potassium rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">77</untitled-ontology-6:Potassium>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Soil_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Soil_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Soil"/>
+        <untitled-ontology-6:Nitrogen rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13</untitled-ontology-6:Nitrogen>
+        <untitled-ontology-6:Ph_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.68</untitled-ontology-6:Ph_value>
+        <untitled-ontology-6:Phosphorus rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60</untitled-ontology-6:Phosphorus>
+        <untitled-ontology-6:Potassium rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25</untitled-ontology-6:Potassium>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Soil_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Soil_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thedr/ontologies/2025/7/untitled-ontology-6#Soil"/>
+        <untitled-ontology-6:Nitrogen rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</untitled-ontology-6:Nitrogen>
+        <untitled-ontology-6:Ph_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.03</untitled-ontology-6:Ph_value>
+        <untitled-ontology-6:Phosphorus rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">72</untitled-ontology-6:Phosphorus>
+        <untitled-ontology-6:Potassium rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">24</untitled-ontology-6:Potassium>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
