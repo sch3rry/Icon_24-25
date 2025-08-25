@@ -1,10 +1,10 @@
 # Raccomandazione Agricola per la semina 
-###Repo per il caso di studio di Ingegneria della conoscenza
+### Repo per il caso di studio di Ingegneria della conoscenza
 ---
 Studente:
 - Matteo Buongiorno matricola 763606
 ---
-##Requirements:
+## Requirements:
 - Protege:
   https://protege.stanford.edu/
 
@@ -14,7 +14,7 @@ Studente:
 -Python 3.13
   https://www.python.org/downloads/release/python-3137/
 ---
-#Starting
+# Starting
 - clona la repo
   ```git clone https://github.com/sch3rry/Icon_24-25.git```
 
@@ -25,7 +25,7 @@ Studente:
   ```pip install -r requirements.txt```
 
 ---
-#Usage
+# Usage
 Ora puoi avviare il main
 ```python main.py```
 
