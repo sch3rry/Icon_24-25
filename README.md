@@ -16,18 +16,18 @@ Studente:
 ---
 #Starting
 - clona la repo
-  //git clone https://github.com/sch3rry/Icon_24-25.git
+  '''git clone https://github.com/sch3rry/Icon_24-25.git'''
 
 - spostatinella cartella della repository clonata
-  //cd Saved/repo
+  '''cd Saved/repo'''
 
 - installa le dipendenze:
-  pip install -r requirements.txt
+  '''pip install -r requirements.txt'''
 
 ---
 #Usage
 Ora puoi avviare il main
-//python main.py
+'''python main.py'''
 
 tramite il menù potrai navigare secondo tre opzioni:
 - Consulta l'ontologia
