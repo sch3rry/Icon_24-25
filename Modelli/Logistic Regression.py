@@ -27,6 +27,7 @@ log_param = {
 
 log_reg = LogisticRegression(C=np.float64(215.44346900318823), l1_ratio=0, multi_class='multinomial', penalty='elasticnet', solver='saga')
 
+#Utilizziamo lo stratified k fold per mantenere la stessa distribuzione di esempi nei fold
 cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
 
 
