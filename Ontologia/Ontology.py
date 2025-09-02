@@ -25,11 +25,15 @@ def list_by_soil(factor_name, min_val, max_val, onto):
         return results
 
     for crop in Crop.instances():
-        for prop in crop.HasSoilProperty():
-            if hasattr(prop, factor_name) and prop.__getattr__(factor_name):
-                value = getattr(crop, factor_name)[0]
-            if min_val <= value <= max_val:
-                results.append((crop.name, value))
+        for prop in crop.HasSoilProperty:
+            if hasattr(prop, factor_name) :
+                value = getattr(prop, factor_name)
+                print(value)
+                if value:
+                    value = value[0]
+                    if min_val <= value <= max_val:
+                        results.append((crop.name,factor_name, value))
+
 
     return results
 
@@ -42,31 +46,21 @@ def filter_by_climate(factor_name, min_val, max_val, onto):
         return results
 
     for crop in Crop.instances():
-        for prop in crop.HasClimateProperty:
-            if hasattr(prop, factor_name) and prop.__getattr__(factor_name):
-                value = getattr(prop, factor_name)[0]
-            if min_val <= value <= max_val:
-                results.append((crop.name, crop.crop_name[0], factor_name, value))
-    if results.__len__() == 0:
-        print(f"nessun individuo ha {factor_name} compreso in {max_val} e {min_val}")
-    else:
-        print(f"{results}")
-    #return results
+        print(crop.name)
 
-def query_6(factor_name, min, max, onto):
-    result = []
-    try:
-        for crop in onto.Crop.instances():
-            for environmental_factor in crop.hasClimateProperty:
-                attribute_values = getattr(environmental_factor, factor_name)
-                if min <= attribute_values[0] <= max:
-                    result.append(crop)
-        if result.__len__() == 0:
-            print(f'nessuno degli individui ha {factor_name} tra {min} e {max}')
-        else:
-            print(f'Risultati Crop con {factor_name} tra {min} e {max}:{result}')
-    except:
-        print('nome del fattore inserito errato')
+        for prop in crop.HasClimateProperty:
+            if hasattr(prop, factor_name):
+                value = getattr(prop, factor_name)
+                if value:
+                    value = value[0]
+                    #print(f"{crop.name} = {factor_name}: {value}")
+                    if min_val <= value <= max_val:
+                        results.append((crop.name, factor_name, value))
+                else:
+                    print(f"{crop.name} = {factor_name}: no value")
+            else:
+                print(f"{crop.name} = {factor_name}: no valid property")
+    return results
 
 def view_ontology():
     while True:
@@ -90,22 +84,31 @@ def view_ontology():
         elif choice == "4":
             print(list_individuals())
         elif choice == "5":
-            factor = input("Inserisci fattore climatico (Nitrogen, Ph_value, Potassium, Phosphorus): ")
+            factor = input("Inserisci fattore terreno (Nitrogen, Ph_value, Potassium, Phosphorus): ").strip()
             try:
-                min_val = int(input("Valore minimo: "))
-                max_val = int(input("Valore massimo: "))
-                print(list_by_soil(factor, min_val, max_val, onto))
-            except:
-                print("Input non valido")
+                min_val = float(input("Valore minimo: "))
+                max_val = float(input("Valore massimo: "))
+                results = list_by_soil(factor, min_val, max_val, onto)
+                if results:
+                    for result in results:
+                        print(f"Individuo: {result[0]}, {result[1]} = {result[2]}")
+                else:
+                    print("Nessun individuo trovato con i valori specificati.")
+            except Exception as e:
+                print(f"Errore nell'input: {e}")
         elif choice == "6":
-            factor = input("Inserisci fattore climatico (temperature, humidity, rainfall): ")
-
-            min_val = int(input("Valore minimo: "))
-            max_val = int(input("Valore massimo: "))
-            query_6(factor, min_val, max_val, onto)
-            #list_by_soil(factor, min_val, max_val, onto)
-            #print(list_by_soil(factor, min_val, max_val, onto))
-
+            factor = input("Inserisci fattore climatico (temperature, humidity, rainfall): ").strip()
+            try:
+                min_val = float(input("Valore minimo: "))
+                max_val = float(input("Valore massimo: "))
+                results = filter_by_climate(factor, min_val, max_val, onto)
+                if results:
+                    for result in results:
+                        print(f"Individuo: {result[0]}, {result[1]} = {result[2]}")
+                else:
+                    print("Nessun individuo trovato con i valori specificati.")
+            except Exception as e:
+                print(f"Errore nell'input: {e}")
         elif choice == "0":
             break
         else:
