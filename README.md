@@ -11,7 +11,7 @@ Studente:
 - SWI Prolog
   https://www.swi-prolog.org/download/stable/bin/swipl-9.2.9-1.x64.exe.envelope
 
--Python 3.13
+- Python 3.13
   https://www.python.org/downloads/release/python-3137/
 ---
 # Starting
