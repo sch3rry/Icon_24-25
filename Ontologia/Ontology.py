@@ -33,6 +33,10 @@ def list_by_soil(factor_name, min_val, max_val, onto):
                     value = value[0]
                     if min_val <= value <= max_val:
                         results.append((crop.name,factor_name, value))
+                else:
+                    print(f"{crop.name} = {factor_name}: no value")
+            else:
+                print(f"{crop.name} = {factor_name}: no valid property")
 
 
     return results
